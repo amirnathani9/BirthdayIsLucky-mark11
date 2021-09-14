@@ -12,19 +12,6 @@ function compareValue(sum, luckyNumber){
     }
 }
 
-
-function birthDayIsLucky(){
-    const dob = dateOfBirth.value;
-    const sum = calculateSum(dob);
-    if(dob&&luckyNumber){
-    compareValue(sum, luckyNumber.value)
-    }
-    else{
-        outputBox.innerText="Input both the values"
-    }
-
-}
-
 function calculateSum(dob){
     dob = dob.replaceAll("-","")
     let sum=0;
@@ -35,6 +22,19 @@ function calculateSum(dob){
     return sum;
 }
 
+function birthDayIsLucky(){
+    const dob = dateOfBirth.value;
+    const sum = calculateSum(dob);
+    if(luckyNumber.value < 0){
+        outputBox.innerText="Negative value is not accepted"
+    }
+    else if(dob&&luckyNumber){
+    compareValue(sum, luckyNumber.value)
+    }
+    else{
+        outputBox.innerText="Input both the values"
+    }
 
+}
 
 checkBtn.addEventListener("click",birthDayIsLucky);
