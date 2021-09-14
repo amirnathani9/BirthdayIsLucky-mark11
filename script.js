@@ -28,7 +28,7 @@ function birthDayIsLucky(){
     if(luckyNumber.value < 0){
         outputBox.innerText="Negative value is not accepted"
     }
-    else if(dob&&luckyNumber){
+    else if(dob&&luckyNumber.value){
     compareValue(sum, luckyNumber.value)
     }
     else{
