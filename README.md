@@ -1,4 +1,4 @@
-# PalindromeBirthday(mark13)
+# Lucky Birthday(mark11)
 
 In this app we can check, the birthday is lucky or not
 
